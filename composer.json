@@ -1,5 +1,14 @@
 {
-  "require": {
-    "hhvm": "3.0.1"
-  }
+    "name": "daneharrigan/playground",
+    "require": {
+        "hhvm": "3.0.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dane Harrigan",
+            "email": "dane.harrigan@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
 }
