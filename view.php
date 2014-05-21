@@ -1,7 +1,7 @@
 <?hh
 
-$source = addcslashes($_POST["source"], '"');
-echo $source;
-$command = "echo \"$source\" | hhvm --php";
-$output  = shell_exec($command);
-echo $output;
+$file_name = "/tmp/" . uniqid() . ".php";
+$source = $_POST;
+
+file_put_contents($file_name, $source);
+echo shell_exec("hhvm $file_name");

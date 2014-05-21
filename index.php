@@ -72,9 +72,8 @@ document.addEventListener("DOMContentLoaded", function(){
       result.innerHTML = response.currentTarget.response
     })
 
-    var payload = "source=" + encodeURIComponent(editor.getValue())
     req.open("POST", "/view", true)
-    req.send(payload)
+    req.send(editor.getValue())
   })
 })
 </script>
