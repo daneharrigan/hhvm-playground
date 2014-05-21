@@ -9,7 +9,7 @@ body {
   background: #fafafa;
 }
 
-#results, form {
+#results, button {
   font-family: "Helvetica Neue", Helvetica, Arial, "lucida grande", sans-serif;
   color: #4e5665;
 }
@@ -44,12 +44,9 @@ section {
   padding: 10px;
 }
 
-#code form {
+#code button {
   position: absolute;
   bottom: -70px;
-}
-
-#code form button {
   border: none;
   background: #fd8724;
   color: #fff;
