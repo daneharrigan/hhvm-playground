@@ -1,7 +1,6 @@
 <?hh
 
 $file_name = "/tmp/" . uniqid() . ".php";
-$source = $_POST;
-
-file_put_contents($file_name, $source);
-echo shell_exec("hhvm $file_name");
+stream_copy_to_stream(fopen("php://input", "rb"), $handle = fopen($file_name, "wb"));
+fclose($handle);
+echo shell_exec("hhvm --tempfile $file_name");
